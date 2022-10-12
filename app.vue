@@ -11,19 +11,45 @@ useHead({
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: true },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;1,300;1,400&display=swap" },
-    { rel: "icon", type: "image/x-icon", href: "/favicon/favicon.ico" },
-    { rel: "apple-touch-icon", sizes: "120x120", href: "/favicon/apple-touch-icon.png" },
-    { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon/favicon-16x16.png" },
-    { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon/favicon-32x32.png" },
   ],
 })
 </script>
 <template lang="pug">
 Header
-div Ann Portfolio
+main
+  NuxtPage
+Sidebar
+Footer
 </template>
 <style lang="scss">
+// - global styles
+* { @apply m-0 p-0 box-border; }
+
 body {
   @apply font-default bg-primary-black text-primary-white;
+}
+
+// -- typography
+a {
+  @apply text-primary-white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply uppercase;
+}
+// elements
+button {
+  @apply bg-transparent w-auto text-primary-white;
+}
+img {
+  @apply w-full block;
+}
+
+main {
+  @apply mt-45px
+          md:(mt-55px);
 }
 </style>
